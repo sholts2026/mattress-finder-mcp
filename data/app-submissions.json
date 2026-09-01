@@ -1,0 +1,35 @@
+{
+  "pet-food-finder": {
+    "proposedName": "Dog Food Finder",
+    "targetKeyword": "dog food finder",
+    "category": "Retail and Shopping",
+    "shortDescription": "Find dog food by allergies, digestion, age, size, picky eating, and monthly budget.",
+    "longDescription": "Dog Food Finder helps shoppers compare fresh dog food, kibble, and subscription plans using the details that matter in real buying decisions: life stage, breed size, protein allergies, stomach sensitivity, picky eating, weight goals, monthly budget, and format preference. It provides fit-based rankings, clear tradeoffs, affiliate disclosures, and safety guardrails for health-sensitive questions.",
+    "keywords": [
+      "dog food",
+      "dog food finder",
+      "fresh dog food",
+      "puppy food",
+      "senior dog food",
+      "sensitive stomach dog food",
+      "chicken allergy dog food",
+      "picky dog food",
+      "dog food subscription",
+      "pet food"
+    ],
+    "starterPrompts": [
+      "Find dog food for a chicken allergy under $100/month.",
+      "Compare fresh dog food for a picky senior dog.",
+      "Find sensitive-stomach food for a large breed dog."
+    ],
+    "discoveryQueries": [
+      "best dog food for sensitive stomach",
+      "best dog food for chicken allergy",
+      "fresh dog food subscription comparison",
+      "dog food for picky eater",
+      "puppy food vs adult dog food"
+    ],
+    "affiliateDisclosure": "Dog Food Finder may earn a commission when users buy through partner links. Recommendations rank user fit first.",
+    "safetyPolicy": "Do not diagnose, treat, or claim to cure pet health conditions. For diagnosed disease, persistent symptoms, medication, prescription diets, or urgent changes in appetite, advise consulting a veterinarian."
+  }
+}

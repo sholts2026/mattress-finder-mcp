@@ -1,0 +1,18 @@
+# Render Blueprint for a stable HTTPS MCP endpoint for OpenAI Plugin submission.
+services:
+  - type: web
+    name: dog-food-finder-mcp
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8790
+      - key: PUBLISHED_APP
+        value: pet-food-finder
+      - key: PUBLIC_BASE_URL
+        value: https://dog-food-finder-mcp.onrender.com
+      - key: OPENAI_APPS_CHALLENGE_TOKEN
+        sync: false
+      - key: AFFILIATE_CONFIG_JSON
+        sync: false

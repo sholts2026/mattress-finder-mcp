@@ -1,0 +1,32 @@
+{
+  "ollie": {
+    "name": "Ollie",
+    "category": "fresh_dog_food",
+    "affiliateNetwork": "Direct / in-house",
+    "publicTerms": "Public page confirms an affiliate program; third-party 2026 reports list CPA or percent terms that must be confirmed after approval.",
+    "commission": "Confirm after approval",
+    "cookieDays": 30,
+    "feedStatus": "Request product/feed access after affiliate approval",
+    "baseUrl": "https://www.ollie.com"
+  },
+  "nomnom": {
+    "name": "Nom Nom",
+    "category": "fresh_dog_food",
+    "affiliateNetwork": "Rakuten",
+    "publicTerms": "Public page confirms commissions on new customers, monthly payouts, and 30-day cookie.",
+    "commission": "Confirm after approval",
+    "cookieDays": 30,
+    "feedStatus": "Rakuten links and creative; request catalog fields after approval",
+    "baseUrl": "https://www.nomnomnow.com"
+  },
+  "petplate": {
+    "name": "PetPlate",
+    "category": "fresh_dog_food",
+    "affiliateNetwork": "Awin / Ambassador",
+    "publicTerms": "Official ambassador page confirms $50 commission on each new client referral. Awin terms are publicly visible for merchant ID 70899.",
+    "commission": "$50 CPA",
+    "cookieDays": null,
+    "feedStatus": "Awin product feed or ambassador link/code after approval",
+    "baseUrl": "https://www.petplate.com"
+  }
+}

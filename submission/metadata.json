@@ -1,0 +1,25 @@
+{
+  "name": "Dog Food Finder",
+  "short_description": "Find dog food by allergies, digestion, life stage, breed size, picky eating, and budget.",
+  "long_description": "Dog Food Finder helps dog owners compare dog food options without leaving the conversation. It ranks products by shopper fit across life stage, breed size, protein avoidances, sensitive stomach needs, picky eating, fresh-food preference, and monthly budget. Results include clear tradeoffs, follow-up questions when useful, and affiliate disclosure before outbound shopping links. The app provides shopping guidance only and does not diagnose or treat pet health conditions.",
+  "category": "retail_and_shopping",
+  "audience_min_age": 13,
+  "example_prompts": [
+    "Find dog food for my adult golden retriever with chicken allergy under $100/month.",
+    "Compare fresh dog food for a picky senior dog.",
+    "Find sensitive-stomach dog food for a large breed dog.",
+    "What dog food works for a puppy with a beef allergy?",
+    "Find a budget dog food subscription under $80/month."
+  ],
+  "tools": [
+    "recommend_pet_food"
+  ],
+  "server_url": "https://dog-food-finder-mcp.onrender.com/mcp",
+  "auth": "noauth",
+  "support_contact": "sholtsman29@gmail.com",
+  "privacy_policy_url": "https://dog-food-finder-mcp.onrender.com/privacy",
+  "terms_url": "https://dog-food-finder-mcp.onrender.com/terms",
+  "demo_url": "https://dog-food-finder.pages.dev",
+  "affiliate_disclosure": "Dog Food Finder may earn a commission when users buy through partner links. Recommendations rank user fit first.",
+  "review_notes": "Published deployment should set PUBLISHED_APP=pet-food-finder so only the recommend_pet_food tool is exposed. PetPlate is approved in Awin; other merchants remain disabled until approved."
+}

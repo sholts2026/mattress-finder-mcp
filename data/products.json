@@ -1,0 +1,162 @@
+[
+  {
+    "sku": "ollie-fresh-mixed-plan",
+    "merchant": "ollie",
+    "category": "pet_food",
+    "name": "Ollie Fresh Mixed Plan",
+    "price": 86,
+    "priceUnit": "monthly_estimate",
+    "aov": 86,
+    "commissionWeight": 0.9,
+    "url": "https://www.ollie.com",
+    "image": "https://www.ollie.com/favicon.ico",
+    "attributes": {
+      "format": "fresh",
+      "lifeStages": [
+        "adult",
+        "senior"
+      ],
+      "breedSizes": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "proteins": [
+        "beef",
+        "turkey",
+        "lamb",
+        "pork"
+      ],
+      "avoids": [
+        "chicken"
+      ],
+      "goodFor": [
+        "sensitive_stomach",
+        "picky_eater",
+        "weight_management"
+      ],
+      "subscription": true,
+      "customizedPlan": true,
+      "vetFormulated": true
+    }
+  },
+  {
+    "sku": "nomnom-fresh-plan",
+    "merchant": "nomnom",
+    "category": "pet_food",
+    "name": "Nom Nom Fresh Dog Food Plan",
+    "price": 92,
+    "priceUnit": "monthly_estimate",
+    "aov": 92,
+    "commissionWeight": 0.85,
+    "url": "https://buy.nomnomnow.com/affiliate/",
+    "image": "https://www.nomnomnow.com/favicon.ico",
+    "attributes": {
+      "format": "fresh",
+      "lifeStages": [
+        "puppy",
+        "adult",
+        "senior"
+      ],
+      "breedSizes": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "proteins": [
+        "beef",
+        "chicken",
+        "turkey",
+        "pork"
+      ],
+      "avoids": [],
+      "goodFor": [
+        "sensitive_stomach",
+        "picky_eater",
+        "portion_control"
+      ],
+      "subscription": true,
+      "customizedPlan": true,
+      "vetFormulated": true
+    }
+  },
+  {
+    "sku": "petplate-fresh-plan",
+    "merchant": "petplate",
+    "category": "pet_food",
+    "name": "PetPlate Fresh Dog Food Plan",
+    "price": 89,
+    "priceUnit": "monthly_estimate",
+    "aov": 89,
+    "commissionWeight": 0.82,
+    "url": "https://www.petplate.com",
+    "image": "https://www.petplate.com/favicon.ico",
+    "attributes": {
+      "format": "fresh",
+      "lifeStages": [
+        "puppy",
+        "adult",
+        "senior"
+      ],
+      "breedSizes": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "proteins": [
+        "beef",
+        "chicken",
+        "turkey",
+        "lamb",
+        "venison"
+      ],
+      "avoids": [],
+      "goodFor": [
+        "portion_control",
+        "picky_eater",
+        "fresh_food_transition"
+      ],
+      "subscription": true,
+      "customizedPlan": true,
+      "vetFormulated": true
+    }
+  },
+  {
+    "sku": "sensitive-salmon-kibble",
+    "merchant": "placeholder-feed",
+    "category": "pet_food",
+    "name": "Sensitive Salmon Kibble",
+    "price": 64,
+    "priceUnit": "monthly_estimate",
+    "aov": 64,
+    "commissionWeight": 0.45,
+    "url": "https://example.com/pet/sensitive-salmon-kibble",
+    "image": "https://example.com/assets/sensitive-salmon.png",
+    "attributes": {
+      "format": "kibble",
+      "lifeStages": [
+        "adult",
+        "senior"
+      ],
+      "breedSizes": [
+        "medium",
+        "large"
+      ],
+      "proteins": [
+        "salmon"
+      ],
+      "avoids": [
+        "chicken",
+        "beef"
+      ],
+      "goodFor": [
+        "sensitive_stomach",
+        "skin_coat",
+        "budget"
+      ],
+      "subscription": false,
+      "customizedPlan": false,
+      "vetFormulated": false
+    }
+  }
+]
