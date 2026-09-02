@@ -81,14 +81,135 @@
     }
   },
   {
-    "sku": "petplate-fresh-plan",
+    "sku": "petplate-tail-waggin-turkey",
     "merchant": "petplate",
     "category": "pet_food",
-    "name": "PetPlate Fresh Dog Food Plan",
+    "name": "PetPlate Tail Waggin' Turkey FreshCooked",
     "price": 89,
     "priceUnit": "monthly_estimate",
     "aov": 89,
-    "commissionWeight": 0.82,
+    "commissionWeight": 0.95,
+    "url": "https://www.petplate.com/entrees",
+    "image": "https://www.petplate.com/favicon.ico",
+    "attributes": {
+      "format": "fresh",
+      "lifeStages": [
+        "puppy",
+        "adult",
+        "senior"
+      ],
+      "breedSizes": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "proteins": [
+        "turkey"
+      ],
+      "avoids": [
+        "chicken",
+        "beef"
+      ],
+      "goodFor": [
+        "sensitive_stomach",
+        "portion_control",
+        "picky_eater",
+        "fresh_food_transition"
+      ],
+      "subscription": true,
+      "customizedPlan": true,
+      "vetFormulated": true
+    }
+  },
+  {
+    "sku": "petplate-lip-lickin-lamb",
+    "merchant": "petplate",
+    "category": "pet_food",
+    "name": "PetPlate Lip Lickin' Lamb FreshCooked",
+    "price": 89,
+    "priceUnit": "monthly_estimate",
+    "aov": 89,
+    "commissionWeight": 0.93,
+    "url": "https://www.petplate.com/entrees",
+    "image": "https://www.petplate.com/favicon.ico",
+    "attributes": {
+      "format": "fresh",
+      "lifeStages": [
+        "puppy",
+        "adult",
+        "senior"
+      ],
+      "breedSizes": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "proteins": [
+        "lamb"
+      ],
+      "avoids": [
+        "chicken",
+        "beef"
+      ],
+      "goodFor": [
+        "picky_eater",
+        "fresh_food_transition",
+        "skin_coat"
+      ],
+      "subscription": true,
+      "customizedPlan": true,
+      "vetFormulated": true
+    }
+  },
+  {
+    "sku": "petplate-lean-mean-venison",
+    "merchant": "petplate",
+    "category": "pet_food",
+    "name": "PetPlate Lean & Mean Venison FreshCooked",
+    "price": 89,
+    "priceUnit": "monthly_estimate",
+    "aov": 89,
+    "commissionWeight": 0.92,
+    "url": "https://www.petplate.com/entrees",
+    "image": "https://www.petplate.com/favicon.ico",
+    "attributes": {
+      "format": "fresh",
+      "lifeStages": [
+        "puppy",
+        "adult",
+        "senior"
+      ],
+      "breedSizes": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "proteins": [
+        "venison"
+      ],
+      "avoids": [
+        "chicken",
+        "beef"
+      ],
+      "goodFor": [
+        "sensitive_stomach",
+        "portion_control",
+        "fresh_food_transition"
+      ],
+      "subscription": true,
+      "customizedPlan": true,
+      "vetFormulated": true
+    }
+  },
+  {
+    "sku": "petplate-fresh-combo-plan",
+    "merchant": "petplate",
+    "category": "pet_food",
+    "name": "PetPlate FreshCombo Plan",
+    "price": 89,
+    "priceUnit": "monthly_estimate",
+    "aov": 89,
+    "commissionWeight": 0.9,
     "url": "https://www.petplate.com",
     "image": "https://www.petplate.com/favicon.ico",
     "attributes": {

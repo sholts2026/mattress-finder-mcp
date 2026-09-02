@@ -1,5 +1,6 @@
 import { getProductsByCategory, loadMerchants, loadProducts } from "./catalogs.js";
 import { buildAffiliateUrl, buildRedirectPath } from "./affiliate.js";
+import { hasAffiliateTemplate } from "./affiliateConfig.js";
 import { parseMattressIntent, parsePetFoodIntent } from "./intent.js";
 import { buildPresentation } from "./presentation.js";
 import { scoreMattress, scorePetFood } from "./scoring.js";
@@ -48,7 +49,9 @@ export function recommend(appId, payload = {}) {
   const intent = profile.parser(payload.query ?? "", payload);
   const merchants = loadMerchants();
   const tags = intentTags(intent);
+  const requireAffiliateProducts = process.env.REQUIRE_AFFILIATE_PRODUCTS !== "false" && Boolean(process.env.PUBLISHED_APP);
   const recommendations = getProductsByCategory(profile.category)
+    .filter((product) => !requireAffiliateProducts || hasAffiliateTemplate(product))
     .map((product) => {
       const scoreResult = profile.scorer(product, intent);
       return { product, scoreResult };

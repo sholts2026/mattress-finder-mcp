@@ -27,3 +27,8 @@ export function applyAffiliateTemplate(product, appId, clickId) {
     .replaceAll("{destinationUrl}", destinationUrl)
     .replaceAll("{encodedDestinationUrl}", encodeURIComponent(destinationUrl));
 }
+
+export function hasAffiliateTemplate(product) {
+  const merchantConfig = loadAffiliateConfig()[product.merchant];
+  return Boolean(merchantConfig?.enabled && merchantConfig.affiliateUrlTemplate);
+}
