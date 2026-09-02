@@ -6,6 +6,7 @@ COPY package.json ./
 COPY src ./src
 COPY data ./data
 COPY config ./config
+COPY submission ./submission
 
 ENV NODE_ENV=production
 ENV PORT=8790
