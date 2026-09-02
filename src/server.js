@@ -173,13 +173,25 @@ Support contact: sholtsman29@gmail.com
         return;
       }
 
+      if (req.method === "GET" && url.pathname === "/demo") {
+        sendText(res, 200, page("Dog Food Finder Demo", `
+<header><h1>Dog Food Finder Demo</h1><p class="lead">Demo flow for OpenAI plugin review.</p></header>
+<main>
+  <section class="panel"><h2>User prompt</h2><p>Find dog food for my adult golden retriever with a chicken allergy under $100/month.</p></section>
+  <section class="panel"><h2>MCP tool</h2><p><code>recommend_pet_food</code></p></section>
+  <section class="panel"><h2>Expected result</h2><p>The app returns ranked PetPlate dog food recommendations, explains allergy, life stage, breed size, budget, and fresh-food tradeoffs, includes affiliate disclosure, and links users out to the merchant site without checkout inside ChatGPT.</p></section>
+</main>`), "text/html; charset=utf-8");
+        return;
+      }
+
       if (req.method === "GET" && url.pathname === "/demo.gif") {
+        const demo = readFileSync(join(rootDir, "submission", "demo.gif"));
         res.writeHead(200, {
           "Content-Type": "image/gif",
           "Access-Control-Allow-Origin": "*",
           "Cache-Control": "public, max-age=3600"
         });
-        res.end(readFileSync(join(rootDir, "submission", "demo.gif")));
+        res.end(demo);
         return;
       }
 
