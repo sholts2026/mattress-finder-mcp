@@ -36,7 +36,7 @@ export function scorePetFood(product, intent) {
   for (const goal of intent.goals) {
     if (goal === "fresh" && attributes.format === "fresh") {
       score += 10;
-      reasons.push("fresh subscription format");
+      reasons.push("fresh food format");
     } else if (attributes.goodFor.includes(goal)) {
       score += 12;
       reasons.push(goal.replaceAll("_", " "));

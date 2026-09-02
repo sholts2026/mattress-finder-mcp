@@ -3,6 +3,7 @@ import { recommend } from "./apps.js";
 const toolDefinitions = [
   {
     name: "recommend_pet_food",
+    title: "Recommend dog food",
     description: "Recommend dog food by allergies, life stage, breed size, stomach sensitivity, picky eating, and monthly budget.",
     inputSchema: {
       type: "object",
@@ -22,10 +23,40 @@ const toolDefinitions = [
         }
       },
       required: ["query"]
+    },
+    outputSchema: {
+      type: "object",
+      properties: {
+        appId: { type: "string" },
+        displayName: { type: "string" },
+        recommendations: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              sku: { type: "string" },
+              name: { type: "string" },
+              merchant: { type: "string" },
+              price: { type: "number" },
+              score: { type: "number" },
+              reasons: { type: "array", items: { type: "string" } },
+              buyUrl: { type: "string" },
+              affiliateDisclosure: { type: "string" }
+            }
+          }
+        },
+        nextQuestions: { type: "array", items: { type: "string" } }
+      }
+    },
+    annotations: {
+      readOnlyHint: true,
+      openWorldHint: false,
+      destructiveHint: false
     }
   },
   {
     name: "recommend_mattress",
+    title: "Recommend mattresses",
     description: "Recommend mattresses by sleep position, heat, firmness, partner needs, size, trial, and budget.",
     inputSchema: {
       type: "object",
@@ -35,6 +66,11 @@ const toolDefinitions = [
         limit: { type: "number" }
       },
       required: ["query"]
+    },
+    annotations: {
+      readOnlyHint: true,
+      openWorldHint: false,
+      destructiveHint: false
     }
   }
 ];
@@ -50,14 +86,33 @@ function allowedTools() {
 }
 
 export function handleMcpRequest(message) {
+  if (Array.isArray(message)) {
+    return message
+      .filter((item) => item.id !== undefined)
+      .map((item) => handleMcpRequest(item));
+  }
+
+  if (!message?.method) {
+    return {
+      jsonrpc: "2.0",
+      id: message?.id ?? null,
+      error: { code: -32600, message: "Invalid request" }
+    };
+  }
+
+  if (message.id === undefined) {
+    return null;
+  }
+
   if (message.method === "initialize") {
     return {
       jsonrpc: "2.0",
       id: message.id,
       result: {
-        protocolVersion: "2024-11-05",
+        protocolVersion: message.params?.protocolVersion ?? "2025-06-18",
         capabilities: { tools: {} },
-        serverInfo: { name: "commerce-finder", version: "0.1.0" }
+        serverInfo: { name: "dog-food-finder", version: "1.0.0" },
+        instructions: "Recommend physical dog food products by fit. Provide shopping guidance only, include affiliate disclosure, and do not diagnose or treat pet health conditions."
       }
     };
   }
@@ -89,14 +144,17 @@ export function handleMcpRequest(message) {
       };
     }
 
+    const result = recommend(appId, args);
+
     return {
       jsonrpc: "2.0",
       id: message.id,
       result: {
+        structuredContent: result,
         content: [
           {
             type: "text",
-            text: JSON.stringify(recommend(appId, args), null, 2)
+            text: JSON.stringify(result, null, 2)
           }
         ]
       }

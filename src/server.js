@@ -224,7 +224,13 @@ Support contact: sholtsman29@gmail.com
 
       if (req.method === "POST" && url.pathname === "/mcp") {
         const message = await readJson(req);
-        sendJson(res, 200, handleMcpRequest(message));
+        const response = handleMcpRequest(message);
+        if (response === null || (Array.isArray(response) && response.length === 0)) {
+          res.writeHead(202, { "Access-Control-Allow-Origin": "*" });
+          res.end();
+          return;
+        }
+        sendJson(res, 200, response);
         return;
       }
 
