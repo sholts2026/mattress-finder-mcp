@@ -1,11 +1,11 @@
-# Terms of Use - Dog Food Finder
+# Terms of Use
 
-Dog Food Finder provides dog food shopping guidance and product comparison support inside ChatGPT. It does not sell products directly, process payments, guarantee prices, or guarantee product availability.
+Last updated: September 2, 2026
 
-Recommendations are based on available product data and the criteria provided by the user. Product information can change, so users should verify final ingredients, prices, subscription terms, discounts, delivery, returns, and merchant policies on the merchant website before purchasing.
+Mattress Finder provides shopping guidance for physical mattresses. It does not sell products, process payments, or guarantee prices, availability, comfort, delivery, trials, warranties, returns, or merchant claims.
 
-Outbound shopping links may be affiliate links. If a user purchases through those links, Dog Food Finder may earn a commission. Recommendations rank user fit first.
+Outbound links may be affiliate links. Product details can change, so users must verify final specifications, price, trial and return terms, and merchant policies before purchasing.
 
-Dog Food Finder is not veterinary advice and should not be used as a substitute for professional veterinary care.
+Comfort is subjective. Mattress recommendations are not medical diagnosis or treatment advice. Users with pain, sleep disorders, or other medical concerns should consult a qualified clinician.
 
-Support contact: sholtsman29@gmail.com
+Support: sholtsman29@gmail.com

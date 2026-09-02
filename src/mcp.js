@@ -63,9 +63,39 @@ const toolDefinitions = [
       properties: {
         query: { type: "string" },
         budget: { type: "number" },
-        limit: { type: "number" }
+        limit: { type: "number" },
+        sleepPosition: { type: "string", enum: ["side", "back", "stomach", "combo"] },
+        firmness: { type: "string", enum: ["soft", "medium", "firm"] },
+        hotSleeper: { type: "boolean" },
+        couple: { type: "boolean" },
+        backPainContext: { type: "boolean" },
+        size: { type: "string", enum: ["twin", "twin xl", "full", "queen", "king", "cal king", "split king"] }
       },
       required: ["query"]
+    },
+    outputSchema: {
+      type: "object",
+      properties: {
+        appId: { type: "string" },
+        displayName: { type: "string" },
+        recommendations: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              sku: { type: "string" },
+              name: { type: "string" },
+              merchant: { type: "string" },
+              price: { type: "number" },
+              score: { type: "number" },
+              reasons: { type: "array", items: { type: "string" } },
+              buyUrl: { type: "string" },
+              affiliateDisclosure: { type: "string" }
+            }
+          }
+        },
+        nextQuestions: { type: "array", items: { type: "string" } }
+      }
     },
     annotations: {
       readOnlyHint: true,
@@ -111,8 +141,8 @@ export function handleMcpRequest(message) {
       result: {
         protocolVersion: message.params?.protocolVersion ?? "2025-06-18",
         capabilities: { tools: {} },
-        serverInfo: { name: "dog-food-finder", version: "1.0.0" },
-        instructions: "Recommend physical dog food products by fit. Provide shopping guidance only, include affiliate disclosure, and do not diagnose or treat pet health conditions."
+        serverInfo: { name: "mattress-finder", version: "1.0.0" },
+        instructions: "Recommend physical mattresses by shopper fit. Explain comfort tradeoffs, include affiliate disclosure, and do not present recommendations as medical treatment."
       }
     };
   }

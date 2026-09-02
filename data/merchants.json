@@ -1,32 +1,6 @@
 {
-  "ollie": {
-    "name": "Ollie",
-    "category": "fresh_dog_food",
-    "affiliateNetwork": "Direct / in-house",
-    "publicTerms": "Public page confirms an affiliate program; third-party 2026 reports list CPA or percent terms that must be confirmed after approval.",
-    "commission": "Confirm after approval",
-    "cookieDays": 30,
-    "feedStatus": "Request product/feed access after affiliate approval",
-    "baseUrl": "https://www.ollie.com"
-  },
-  "nomnom": {
-    "name": "Nom Nom",
-    "category": "fresh_dog_food",
-    "affiliateNetwork": "Rakuten",
-    "publicTerms": "Public page confirms commissions on new customers, monthly payouts, and 30-day cookie.",
-    "commission": "Confirm after approval",
-    "cookieDays": 30,
-    "feedStatus": "Rakuten links and creative; request catalog fields after approval",
-    "baseUrl": "https://www.nomnomnow.com"
-  },
-  "petplate": {
-    "name": "PetPlate",
-    "category": "fresh_dog_food",
-    "affiliateNetwork": "Awin / Ambassador",
-    "publicTerms": "Approved Awin programme for advertiser ID 70899 shows $25 per sale and 30-day cookie.",
-    "commission": "$25 per sale",
-    "cookieDays": 30,
-    "feedStatus": "Awin link tracking is active. Product feeds were not available in the observed programme terms, so current catalog entries are curated from PetPlate public product pages.",
-    "baseUrl": "https://www.petplate.com"
-  }
+  "saatva":{"name":"Saatva","category":"mattress","affiliateNetwork":"Awin","publicTerms":"Application submitted through Awin advertiser 88129; approval and final terms must be verified before affiliate links are enabled.","commission":"Pending approval","cookieDays":null,"feedStatus":"Pending approval","baseUrl":"https://www.saatva.com"},
+  "helix":{"name":"Helix Sleep","category":"mattress","affiliateNetwork":"Pending","commission":"Not enabled","cookieDays":null,"feedStatus":"Curated catalog only","baseUrl":"https://helixsleep.com"},
+  "nectar":{"name":"Nectar Sleep","category":"mattress","affiliateNetwork":"Pending","commission":"Not enabled","cookieDays":null,"feedStatus":"Curated catalog only","baseUrl":"https://www.nectarsleep.com"},
+  "dreamcloud":{"name":"DreamCloud","category":"mattress","affiliateNetwork":"Pending","commission":"Not enabled","cookieDays":null,"feedStatus":"Curated catalog only","baseUrl":"https://www.dreamcloudsleep.com"}
 }

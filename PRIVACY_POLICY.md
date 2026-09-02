@@ -1,23 +1,11 @@
-# Privacy Policy - Dog Food Finder
+# Privacy Policy
 
-Dog Food Finder is a ChatGPT shopping assistant that helps users compare dog food options by life stage, breed size, allergies, sensitive stomach needs, picky eating, format preference, and budget.
+Last updated: September 2, 2026
 
-## Information processed
+Mattress Finder processes shopping criteria that users choose to provide, including budget, mattress size, sleep position, firmness, cooling, partner preferences, and general comfort context. It does not request payment information, passwords, government identifiers, precise location, or medical records.
 
-The app processes only the shopping criteria a user chooses to provide in the conversation, such as budget, dog age or life stage, breed size, protein avoidances, and product preferences. The app does not ask for payment information, passwords, government IDs, precise location, or veterinary records.
+The information is used to generate recommendations and maintain basic security and debugging logs. Affiliate clicks may include the app, merchant, product, rank, and a non-personal click reference for attribution. Approved affiliate networks and merchants may process click and purchase data under their own policies.
 
-## How information is used
+Operational logs are retained only as reasonably necessary for security and debugging. Users may request privacy information or deletion of identifiable support correspondence by contacting sholtsman29@gmail.com.
 
-Inputs are used to generate product recommendations, explain tradeoffs, and produce affiliate links when relevant. Basic logs may be used for debugging, abuse prevention, and measuring anonymous click performance.
-
-## Affiliate links
-
-Dog Food Finder may earn a commission when users buy through partner links. Affiliate click URLs may include app ID, merchant, SKU, rank, and a non-personal click reference for attribution.
-
-## Health-sensitive guidance
-
-Dog Food Finder provides shopping guidance only. It does not diagnose, treat, or claim to cure pet health conditions. For diagnosed disease, symptoms, medication, prescription diets, or urgent changes in appetite, users should consult a veterinarian.
-
-## Contact
-
-Support and privacy contact: sholtsman29@gmail.com
+Mattress Finder may earn commissions through partner links. Recommendations rank user fit first.

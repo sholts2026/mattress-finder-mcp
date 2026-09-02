@@ -10,7 +10,7 @@ COPY submission ./submission
 
 ENV NODE_ENV=production
 ENV PORT=8790
-ENV PUBLISHED_APP=pet-food-finder
+ENV PUBLISHED_APP=mattress-finder
 
 EXPOSE 8790
 

@@ -1,8 +1,8 @@
-# Dog Food Finder
+# Mattress Finder
 
-Dog Food Finder is an MCP-based ChatGPT shopping app that helps dog owners compare dog food by life stage, breed size, allergies, sensitive stomach needs, picky eating, fresh-food preference, and monthly budget.
+Mattress Finder is an MCP-based ChatGPT shopping app that compares physical mattresses by sleep position, firmness, cooling, partner needs, size, trial length, warranty, and budget.
 
-The app ranks products by shopper fit first, includes affiliate disclosure on outbound shopping links, and avoids veterinary diagnosis or treatment claims.
+Recommendations rank shopper fit first, explain tradeoffs, disclose affiliate relationships, and avoid medical treatment claims.
 
 ## Run locally
 
@@ -10,45 +10,22 @@ The app ranks products by shopper fit first, includes affiliate disclosure on ou
 npm start
 ```
 
-Default local URL:
+Production environment:
 
 ```text
-http://localhost:8790
-```
-
-## Production mode
-
-Render should set:
-
-```text
-PUBLISHED_APP=pet-food-finder
-PUBLIC_BASE_URL=https://dog-food-finder-mcp.onrender.com
+PUBLISHED_APP=mattress-finder
+PUBLIC_BASE_URL=https://mattress-finder-mcp.onrender.com
 AFFILIATE_CONFIG_JSON=<approved affiliate JSON>
 ```
 
-In production, the MCP server exposes only:
-
-```text
-recommend_pet_food
-```
+The production MCP server exposes only `recommend_mattress`. Affiliate links must remain disabled until the relevant merchant program is approved.
 
 ## Endpoints
 
-- `GET /`
 - `GET /health`
 - `GET /privacy`
 - `GET /terms`
 - `GET /support`
-- `GET /partners`
+- `GET /demo`
 - `POST /mcp`
-- `POST /apps/pet-food-finder/recommend`
-
-## Submit
-
-OpenAI submission metadata lives in:
-
-```text
-submission/metadata.json
-```
-
-Deploy first, verify `/health` and `/mcp`, then submit the stable MCP URL in the OpenAI developer dashboard.
+- `POST /apps/mattress-finder/recommend`

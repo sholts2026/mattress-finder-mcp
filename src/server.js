@@ -91,18 +91,18 @@ function homePage() {
   </section>
   <section class="panel" id="privacy">
     <h2>Privacy Policy</h2>
-    <p>Dog Food Finder processes only the shopping criteria a user chooses to provide, such as budget, dog life stage, breed size, allergies, sensitive stomach needs, picky eating, or food format preference. It does not ask for payment information, account passwords, government IDs, precise location, or veterinary records.</p>
+    <p>Mattress Finder processes only the shopping criteria a user chooses to provide, such as budget, mattress size, sleep position, firmness, cooling, and partner preferences. It does not ask for payment information, account passwords, government IDs, precise location, or medical records.</p>
     <p>Request details are used to generate recommendations, improve product ranking, and maintain basic abuse prevention and debugging logs. Affiliate clicks may include app, merchant, SKU, rank, and a non-personal click reference so approved affiliate networks can attribute purchases.</p>
   </section>
   <section class="panel" id="terms">
     <h2>Terms of Use</h2>
-    <p>Dog Food Finder provides dog food shopping guidance and product comparison support inside ChatGPT. It does not sell products directly, process payments, or guarantee pricing, availability, discounts, delivery, ingredients, or merchant claims.</p>
-    <p>Outbound shopping links may be affiliate links. If a user purchases through those links, Dog Food Finder may earn a commission. Product information can change, so users should verify final price, ingredients, subscription terms, returns, and merchant policies on the merchant website before purchasing.</p>
-    <p>Dog food recommendations are shopping guidance only and are not veterinary diagnosis or treatment advice.</p>
+    <p>Mattress Finder provides mattress shopping guidance and product comparison support inside ChatGPT. It does not sell products directly, process payments, or guarantee pricing, availability, delivery, comfort, trials, warranties, returns, or merchant claims.</p>
+    <p>Outbound shopping links may be affiliate links. If a user purchases through those links, Mattress Finder may earn a commission. Product information can change, so users should verify final price, specifications, trial terms, returns, and merchant policies before purchasing.</p>
+    <p>Mattress recommendations are shopping guidance only and are not medical diagnosis or treatment advice.</p>
   </section>
   <section class="panel" id="partners">
     <h2>Partner Information</h2>
-    <p>Promotion methods include ChatGPT app recommendations, supporting SEO pages, comparison content, and contextual affiliate links shown after a user requests product options. The app avoids veterinary diagnosis, medical treatment claims, trademark bidding, false coupons, and unauthorized brand claims.</p>
+    <p>Promotion methods include ChatGPT app recommendations, supporting SEO pages, comparison content, and contextual affiliate links shown after a user requests product options. The app avoids medical treatment claims, trademark bidding, false coupons, and unauthorized brand claims.</p>
   </section>
 </main>
 <footer>
@@ -141,11 +141,11 @@ export function createServer() {
       if (req.method === "GET" && url.pathname === "/privacy") {
         sendText(res, 200, `Privacy Policy
 
-Dog Food Finder is a shopping assistant for ChatGPT. We process only the shopping criteria a user chooses to provide, such as budget, dog life stage, breed size, allergies, sensitive stomach needs, picky eating, or food format preference. We do not ask for payment information, account passwords, government IDs, precise location, or veterinary records.
+Mattress Finder is a shopping assistant for ChatGPT. We process only the shopping criteria a user chooses to provide, such as budget, mattress size, sleep position, firmness, cooling, and partner preferences. We do not ask for payment information, account passwords, government IDs, precise location, or medical records.
 
 We use request details to generate recommendations, improve product ranking, and maintain basic abuse prevention and debugging logs. Affiliate clicks may include app, merchant, SKU, rank, and a non-personal click reference so that approved affiliate networks can attribute purchases.
 
-We may earn commissions when users buy through partner links. Recommendations are ranked by user fit first. Pet nutrition guidance is shopping guidance only and is not veterinary advice.
+We may earn commissions when users buy through partner links. Recommendations are ranked by user fit first. Mattress guidance is shopping guidance only and is not medical advice.
 
 Support and privacy contact: sholtsman29@gmail.com
 `);
@@ -155,11 +155,11 @@ Support and privacy contact: sholtsman29@gmail.com
       if (req.method === "GET" && url.pathname === "/terms") {
         sendText(res, 200, `Terms of Use
 
-Dog Food Finder provides dog food shopping guidance and product comparison support inside ChatGPT. The app does not sell products directly, process payments, or guarantee pricing, availability, discounts, delivery, ingredients, or merchant claims.
+Mattress Finder provides mattress shopping guidance and product comparison support inside ChatGPT. The app does not sell products directly, process payments, or guarantee pricing, availability, discounts, delivery, comfort, trial terms, warranties, or merchant claims.
 
-Outbound links may be affiliate links. If a user purchases through those links, we may earn a commission. Product information can change, so users should verify final price, ingredients, subscription terms, returns, and merchant policies on the merchant website before purchasing.
+Outbound links may be affiliate links. If a user purchases through those links, we may earn a commission. Product information can change, so users should verify final price, specifications, trial terms, returns, and merchant policies before purchasing.
 
-Dog food recommendations are not veterinary diagnosis or treatment advice.
+Mattress recommendations are not medical diagnosis or treatment advice.
 
 Support contact: sholtsman29@gmail.com
 `);
@@ -174,12 +174,12 @@ Support contact: sholtsman29@gmail.com
       }
 
       if (req.method === "GET" && url.pathname === "/demo") {
-        sendText(res, 200, page("Dog Food Finder Demo", `
-<header><h1>Dog Food Finder Demo</h1><p class="lead">Demo flow for OpenAI plugin review.</p></header>
+        sendText(res, 200, page("Mattress Finder Demo", `
+<header><h1>Mattress Finder Demo</h1><p class="lead">Demo flow for OpenAI plugin review.</p></header>
 <main>
-  <section class="panel"><h2>User prompt</h2><p>Find dog food for my adult golden retriever with a chicken allergy under $100/month.</p></section>
-  <section class="panel"><h2>MCP tool</h2><p><code>recommend_pet_food</code></p></section>
-  <section class="panel"><h2>Expected result</h2><p>The app returns ranked PetPlate dog food recommendations, explains allergy, life stage, breed size, budget, and fresh-food tradeoffs, includes affiliate disclosure, and links users out to the merchant site without checkout inside ChatGPT.</p></section>
+  <section class="panel"><h2>User prompt</h2><p>Find a queen mattress for a hot side sleeper under $1,500.</p></section>
+  <section class="panel"><h2>MCP tool</h2><p><code>recommend_mattress</code></p></section>
+  <section class="panel"><h2>Expected result</h2><p>The app returns ranked mattress recommendations, explains sleep-position, cooling, firmness, trial, and budget tradeoffs, includes affiliate disclosure, and links users out to merchant sites without checkout inside ChatGPT.</p></section>
 </main>`), "text/html; charset=utf-8");
         return;
       }
