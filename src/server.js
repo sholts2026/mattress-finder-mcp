@@ -81,11 +81,24 @@ function homePage() {
     <h2>Reviewer information</h2>
     <ul>
       <li>MCP endpoint: <code>${endpoint}</code></li>
-      <li>Privacy: <a href="/privacy">/privacy</a></li>
-      <li>Terms: <a href="/terms">/terms</a></li>
-      <li>Support: <a href="/support">/support</a></li>
-      <li>Partners: <a href="/partners">/partners</a></li>
+      <li>Privacy policy and terms are included on this page and also available at <a href="/privacy">/privacy</a> and <a href="/terms">/terms</a>.</li>
+      <li>Support contact: <a href="mailto:sholtsman29@gmail.com">sholtsman29@gmail.com</a></li>
     </ul>
+  </section>
+  <section class="panel" id="privacy">
+    <h2>Privacy Policy</h2>
+    <p>Dog Food Finder processes only the shopping criteria a user chooses to provide, such as budget, dog life stage, breed size, allergies, sensitive stomach needs, picky eating, or food format preference. It does not ask for payment information, account passwords, government IDs, precise location, or veterinary records.</p>
+    <p>Request details are used to generate recommendations, improve product ranking, and maintain basic abuse prevention and debugging logs. Affiliate clicks may include app, merchant, SKU, rank, and a non-personal click reference so approved affiliate networks can attribute purchases.</p>
+  </section>
+  <section class="panel" id="terms">
+    <h2>Terms of Use</h2>
+    <p>Dog Food Finder provides dog food shopping guidance and product comparison support inside ChatGPT. It does not sell products directly, process payments, or guarantee pricing, availability, discounts, delivery, ingredients, or merchant claims.</p>
+    <p>Outbound shopping links may be affiliate links. If a user purchases through those links, Dog Food Finder may earn a commission. Product information can change, so users should verify final price, ingredients, subscription terms, returns, and merchant policies on the merchant website before purchasing.</p>
+    <p>Dog food recommendations are shopping guidance only and are not veterinary diagnosis or treatment advice.</p>
+  </section>
+  <section class="panel" id="partners">
+    <h2>Partner Information</h2>
+    <p>Promotion methods include ChatGPT app recommendations, supporting SEO pages, comparison content, and contextual affiliate links shown after a user requests product options. The app avoids veterinary diagnosis, medical treatment claims, trademark bidding, false coupons, and unauthorized brand claims.</p>
   </section>
 </main>
 <footer>
@@ -173,6 +186,16 @@ Support contact: sholtsman29@gmail.com
 
       if (req.method === "GET" && url.pathname === "/apps") {
         sendJson(res, 200, { apps: visibleAppEntries().map(([, { parser, scorer, ...profile }]) => profile) });
+        return;
+      }
+
+      if (req.method === "GET" && url.pathname === "/mcp") {
+        sendJson(res, 200, {
+          ok: true,
+          transport: "streamable-http",
+          endpoint: `${publicBaseUrl}/mcp`,
+          usage: "POST JSON-RPC initialize, tools/list, or tools/call requests to this endpoint."
+        });
         return;
       }
 
