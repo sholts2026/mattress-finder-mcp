@@ -174,12 +174,18 @@ Support contact: sholtsman29@gmail.com
       }
 
       if (req.method === "GET" && url.pathname === "/demo") {
+        const demoResult = recommend("mattress-finder", {
+          query: "Find a queen mattress for a hot side sleeper under $1,500."
+        });
+        const demoCards = demoResult.recommendations.map((item, index) => `
+  <section class="panel"><h2>${index + 1}. ${item.name}</h2><p><strong>$${item.price} queen estimate</strong> · Fit score ${item.score}/100</p><p>${item.reasons.join(" · ")}</p></section>`).join("");
         sendText(res, 200, page("Mattress Finder Demo", `
 <header><h1>Mattress Finder Demo</h1><p class="lead">Demo flow for OpenAI plugin review.</p></header>
 <main>
   <section class="panel"><h2>User prompt</h2><p>Find a queen mattress for a hot side sleeper under $1,500.</p></section>
   <section class="panel"><h2>MCP tool</h2><p><code>recommend_mattress</code></p></section>
-  <section class="panel"><h2>Expected result</h2><p>The app returns ranked mattress recommendations, explains sleep-position, cooling, firmness, trial, and budget tradeoffs, includes affiliate disclosure, and links users out to merchant sites without checkout inside ChatGPT.</p></section>
+  ${demoCards}
+  <p>${demoResult.presentation.disclosure}</p>
 </main>`), "text/html; charset=utf-8");
         return;
       }
