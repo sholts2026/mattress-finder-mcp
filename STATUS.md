@@ -9,6 +9,10 @@ Last updated: 2026-09-02
 - Intent parsing for position, firmness, cooling, couples, size, pain context, and budget
 - Fit-first scoring, presentation cards, affiliate disclosure, privacy, terms, and submission metadata
 - Local automated tests passing
+- GitHub: https://github.com/sholts2026/mattress-finder-mcp
+- Render: https://mattress-finder-mcp.onrender.com
+- MCP: https://mattress-finder-mcp.onrender.com/mcp
+- Render Blueprint ID: `exs-dabu2krtqb8s73dirsp0`
 
 ## Affiliate
 
@@ -20,4 +24,4 @@ Last updated: 2026-09-02
 
 ## Next
 
-Verify Saatva status in Awin, create the GitHub repository and Render service, configure approved tracking, generate submission icons/demo, verify the hosted MCP endpoint, and submit version 1.0.0 to OpenAI review.
+Wait for Saatva approval, verify its final commission terms, configure approved tracking, replace staging mode with affiliate-only mode, generate a mattress demo video, verify the hosted MCP endpoint, and submit version 1.0.0 to OpenAI review.

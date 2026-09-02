@@ -12,6 +12,8 @@ services:
         value: mattress-finder
       - key: PUBLIC_BASE_URL
         value: https://mattress-finder-mcp.onrender.com
+      - key: REQUIRE_AFFILIATE_PRODUCTS
+        value: "false"
       - key: OPENAI_APPS_CHALLENGE_TOKEN
         sync: false
       - key: AFFILIATE_CONFIG_JSON
