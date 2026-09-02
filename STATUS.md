@@ -13,6 +13,11 @@ Last updated: 2026-09-02
 - Render: https://mattress-finder-mcp.onrender.com
 - MCP: https://mattress-finder-mcp.onrender.com/mcp
 - Render Blueprint ID: `exs-dabu2krtqb8s73dirsp0`
+- OpenAI App ID: `asdk_app_6a97e4e8a4448191be98a3afa3f5da48`
+- OpenAI Version ID: `asdk_app_v_6a97e4e9e060819198a42ec7a504b77b`
+- Version `1.0.0` submitted to OpenAI review on 2026-09-02
+- OpenAI domain verification completed
+- Review demo: https://mattress-finder-mcp.onrender.com/demo.mp4
 
 ## Affiliate
 
@@ -24,4 +29,4 @@ Last updated: 2026-09-02
 
 ## Next
 
-Wait for Saatva approval, verify its final commission terms, configure approved tracking, replace staging mode with affiliate-only mode, generate a mattress demo video, verify the hosted MCP endpoint, and submit version 1.0.0 to OpenAI review.
+Wait for the OpenAI review decision and Saatva approval. After Saatva approval, verify its final commission terms, configure approved tracking, replace staging mode with affiliate-only mode, and run a production purchase-link audit before publishing affiliate traffic.
