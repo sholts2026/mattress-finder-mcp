@@ -67,7 +67,7 @@ export function scoreMattress(product, intent) {
   let score = 0;
   const reasons = [];
 
-  if (attributes.sleepPositions.includes(intent.sleepPosition) || attributes.sleepPositions.includes("combo")) {
+  if (attributes.sleepPositions.includes(intent.sleepPosition)) {
     score += 22;
     reasons.push(`good fit for ${intent.sleepPosition} sleeping`);
   }
