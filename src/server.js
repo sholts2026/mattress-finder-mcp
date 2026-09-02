@@ -1,5 +1,8 @@
+import { readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
 import http from "node:http";
 import { pathToFileURL } from "node:url";
+import { fileURLToPath } from "node:url";
 import { loadProducts } from "./catalogs.js";
 import { buildAffiliateUrl, trackClick } from "./affiliate.js";
 import { recommend, appProfiles } from "./apps.js";
@@ -9,6 +12,7 @@ import { loadSubmission } from "./submissions.js";
 const port = Number(process.env.PORT ?? 8790);
 const publishedApp = process.env.PUBLISHED_APP;
 const publicBaseUrl = process.env.PUBLIC_BASE_URL ?? `http://localhost:${port}`;
+const rootDir = dirname(dirname(fileURLToPath(import.meta.url)));
 
 function visibleAppEntries() {
   const entries = Object.entries(appProfiles);
@@ -166,6 +170,16 @@ Support contact: sholtsman29@gmail.com
         sendText(res, 200, page("Support", `
 <header><h1>Support</h1><p class="lead">For support, privacy, legal, or partnership questions, contact <a href="mailto:sholtsman29@gmail.com">sholtsman29@gmail.com</a>.</p></header>
 <main><p><a href="/">Home</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p></main>`), "text/html; charset=utf-8");
+        return;
+      }
+
+      if (req.method === "GET" && url.pathname === "/demo.gif") {
+        res.writeHead(200, {
+          "Content-Type": "image/gif",
+          "Access-Control-Allow-Origin": "*",
+          "Cache-Control": "public, max-age=3600"
+        });
+        res.end(readFileSync(join(rootDir, "submission", "demo.gif")));
         return;
       }
 
