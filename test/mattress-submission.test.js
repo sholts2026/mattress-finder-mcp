@@ -15,7 +15,7 @@ test("mattress submission metadata is discovery-focused", () => {
 test("hot side sleeper receives ranked mattress recommendations", () => {
   const result = recommend("mattress-finder", { query: "queen mattress for a hot side sleeper under $2000" });
   assert.equal(result.recommendations.length > 0, true);
-  assert.equal(result.recommendations[0].sku, "helix-midnight-luxe");
+  assert.equal(result.recommendations[0].sku, "nectar-premier");
   assert.match(result.recommendations[0].reasons.join(" "), /side sleeping|cooling/);
   assert.equal(result.presentation.cards[0].callToAction.label, "View offer");
 });
