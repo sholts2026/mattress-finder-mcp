@@ -10,10 +10,11 @@ This package is for submitting Dog Food Finder to the OpenAI Plugin/App Director
 - [x] Affiliate disclosure included in recommendation output and public pages.
 - [x] Privacy policy and terms drafted.
 - [x] Public marketing/reviewer site live at `https://dog-food-finder.pages.dev`.
-- [ ] Deploy MCP backend to stable HTTPS URL.
-- [ ] Verify `https://dog-food-finder-mcp.onrender.com/health`.
-- [ ] Verify `https://dog-food-finder-mcp.onrender.com/mcp`.
-- [ ] Set `AFFILIATE_CONFIG_JSON` in the host environment with approved PetPlate tracking configuration.
+- [x] Deploy MCP backend to stable HTTPS URL: `https://dog-food-finder-mcp.onrender.com`.
+- [x] Verify `https://dog-food-finder-mcp.onrender.com/health`.
+- [x] Verify `https://dog-food-finder-mcp.onrender.com/mcp`.
+- [x] Set `AFFILIATE_CONFIG_JSON` in the host environment with approved PetPlate/Awin tracking configuration.
+- [x] Restrict published recommendations to merchants with active affiliate tracking.
 - [ ] Fill any OpenAI domain challenge token in `OPENAI_APPS_CHALLENGE_TOKEN`.
 - [ ] Submit in OpenAI developer dashboard.
 
@@ -43,6 +44,11 @@ Set this in Render after creating the service:
 Expected behavior:
 
 - The app returns ranked products with fit scores and tradeoffs.
-- The app avoids products that conflict with explicit allergy constraints when possible.
+- The public deployment returns PetPlate recommendations only while PetPlate is the only approved affiliate programme.
+- The app avoids products that conflict with explicit allergy constraints when possible and asks users to verify final ingredients with the merchant.
 - The app includes affiliate disclosure near outbound links.
 - The app does not make veterinary diagnosis or treatment claims.
+
+## Current Verified Production Result
+
+For `Find dog food for my adult golden retriever with chicken allergy under $100/month.`, the live MCP deployment returns three PetPlate recommendations. All returned `buyUrl` values use Awin advertiser ID `70899`.

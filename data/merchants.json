@@ -23,10 +23,10 @@
     "name": "PetPlate",
     "category": "fresh_dog_food",
     "affiliateNetwork": "Awin / Ambassador",
-    "publicTerms": "Official ambassador page confirms $50 commission on each new client referral. Awin terms are publicly visible for merchant ID 70899.",
-    "commission": "$50 CPA",
-    "cookieDays": null,
-    "feedStatus": "Awin product feed or ambassador link/code after approval",
+    "publicTerms": "Approved Awin programme for advertiser ID 70899 shows $25 per sale and 30-day cookie.",
+    "commission": "$25 per sale",
+    "cookieDays": 30,
+    "feedStatus": "Awin link tracking is active. Product feeds were not available in the observed programme terms, so current catalog entries are curated from PetPlate public product pages.",
     "baseUrl": "https://www.petplate.com"
   }
 }
