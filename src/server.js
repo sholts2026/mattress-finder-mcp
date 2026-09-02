@@ -195,6 +195,17 @@ Support contact: sholtsman29@gmail.com
         return;
       }
 
+      if (req.method === "GET" && url.pathname === "/demo.mp4") {
+        const demo = readFileSync(join(rootDir, "submission", "demo.mp4"));
+        res.writeHead(200, {
+          "Content-Type": "video/mp4",
+          "Access-Control-Allow-Origin": "*",
+          "Cache-Control": "public, max-age=3600"
+        });
+        res.end(demo);
+        return;
+      }
+
       if (req.method === "GET" && url.pathname === "/partners") {
         sendText(res, 200, page("Partner Information", `
 <header><h1>Partner Information</h1><p class="lead">This app is an independent affiliate publisher focused on high-intent ChatGPT shopping conversations.</p></header>
