@@ -1,6 +1,7 @@
 import { appendFileSync } from "node:fs";
 import { join } from "node:path";
 import { applyAffiliateTemplate } from "./affiliateConfig.js";
+import { recordAffiliateClickFromLog } from "./analytics.js";
 
 const clickLog = join(process.cwd(), "clicks.jsonl");
 
@@ -42,5 +43,12 @@ export function trackClick({ appId, merchant, sku, destination, queryId = null, 
     intentTags
   };
   appendFileSync(clickLog, `${JSON.stringify(record)}\n`);
+  try {
+    recordAffiliateClickFromLog(record);
+  } catch {
+    // Analytics must never block outbound affiliate routing.
+  }
   return record;
 }
+
+
